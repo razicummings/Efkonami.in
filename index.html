@@ -1,0 +1,116 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Razzy eFootball Tournament</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2c003e 0%, #8e2de2 50%, #4a00e0 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      transition: all 0.5s ease;
+      margin-bottom: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1, h2, h3, p {
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: gold;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-box {
+      margin-top: 20px;
+      padding: 15px;
+      background: #111;
+      border: 2px solid gold;
+      border-radius: 8px;
+    }
+
+    .contact-box a {
+      text-decoration: none;
+      color: gold;
+      font-weight: bold;
+    }
+
+    .fee-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid gold;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="registration">
+    <h1>Register for Razzy eFootball Tournament</h1>
+    <input type="text" placeholder="Your Name" required>
+    <input type="text" placeholder="eFootball ID" required>
+    <button onclick="showTournament()">Continue</button>
+  </div>
+
+  <div class="container hidden" id="tournament">
+    <h2>EFKONAMI</h2>
+    <p>TOURNAMENT – 25 & 26 AUGUST 2025</p>
+    
+    <div class="fee-box">
+      <h3>Entry Fee</h3>
+      <p><strong>$1</strong></p>
+    </div>
+
+    <div class="contact-box">
+      <p>Need Help or Info?</p>
+      <a href="https://wa.me/916282551994" target="_blank">Contact Organizer on WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    function showTournament() {
+      document.getElementById('registration').classList.add('hidden');
+      document.getElementById('tournament').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html
